@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Memory Game</title>
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BG Memory Game</h1>
+        </header>
+
+        <section class="score-panel">
+        	<span class="moves">0</span> Move(s)
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="apple">
+                <i class="fa fa-apple"></i>
+            </li>
+            <li class="card" type="pineapple">
+                <i class="fa fa-pineapple"></i>
+            </li>
+            <li class="card match" type="pear">
+                <i class="fa fa-pear"></i>
+            </li>
+            <li class="card" type="banana" >
+                <i class="fa fa-banana"></i>
+            </li>
+            <li class="card" type="cherry">
+                <i class="fa fa-cherry"></i>
+            </li>
+            <li class="card match" type="grape">
+                <i class="fa fa-grape"></i>
+            </li>
+            <li class="card" type="lemon">
+                <i class="fa fa-lemon"></i>
+            </li>
+            <li class="card" type="carrot">
+                <i class="fa fa-carrot"></i>
+            </li>
+            <li class="card" type="apple">
+                <i class="fa fa-apple"></i>
+            </li>
+            <li class="card" type="pineapple">
+                <i class="fa fa-pineapple"></i>
+            </li>
+            <li class="card match" type="pear">
+                <i class="fa fa-pear"></i>
+            </li>
+            <li class="card" type="banana" >
+                <i class="fa fa-banana"></i>
+            </li>
+            <li class="card" type="cherry">
+                <i class="fa fa-cherry"></i>
+            </li>
+            <li class="card match" type="grape">
+                <i class="fa fa-grape"></i>
+            </li>
+            <li class="card" type="lemon">
+                <i class="fa fa-lemon"></i>
+            </li>
+            <li class="card" type="carrot">
+                <i class="fa fa-carrot"></i>
+            </li>            
+        </ul>
+
+        <div id="popup" class="overlay">
+            <div class="popup">
+                <h2>Congratulations</h2>
+                <a class="close" href=# >×</a>
+                <div class="content1">
+                    Congratulations you're a winner
+                </div>
+                <div class="content2">
+                    <p>You made <span id=finalMove> </span> moves </p>
+                    <p>in <span id=totalTime> </span> </p>
+                </div>
+                <button id="play-again"onclick="playAgain()">
+                    Play again</a>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
