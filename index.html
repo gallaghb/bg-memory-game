@@ -1,18 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BG Memory Game</title>
-    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
     <div class="container">
         <header>
             <h1>BG Memory Game</h1>
         </header>
 
         <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
         	<span class="moves">0</span> Move(s)
 
             <div class="timer">
@@ -24,69 +35,70 @@
         </section>
 
         <ul class="deck" id="card-deck">
-            <li class="card" type="apple">
+            <li class="card" type="fruit">
                 <i class="fa fa-apple"></i>
             </li>
-            <li class="card" type="pineapple">
-                <i class="fa fa-pineapple"></i>
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
             </li>
-            <li class="card match" type="pear">
-                <i class="fa fa-pear"></i>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
             </li>
-            <li class="card" type="banana" >
-                <i class="fa fa-banana"></i>
+            <li class="card" type="bolt" >
+                <i class="fa fa-bolt"></i>
             </li>
-            <li class="card" type="cherry">
-                <i class="fa fa-cherry"></i>
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
             </li>
-            <li class="card match" type="grape">
-                <i class="fa fa-grape"></i>
+            <li class="card match" type="anchor">
+                <i class="fa fa-anchor"></i>
             </li>
-            <li class="card" type="lemon">
-                <i class="fa fa-lemon"></i>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
             </li>
-            <li class="card" type="carrot">
-                <i class="fa fa-carrot"></i>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
             </li>
-            <li class="card" type="apple">
+            <li class="card" type="fruit">
                 <i class="fa fa-apple"></i>
             </li>
-            <li class="card" type="pineapple">
-                <i class="fa fa-pineapple"></i>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
             </li>
-            <li class="card match" type="pear">
-                <i class="fa fa-pear"></i>
+            <li class="card" type="leaf">
+                <i class="fa fa-leaf"></i>
             </li>
-            <li class="card" type="banana" >
-                <i class="fa fa-banana"></i>
+            <li class="card" type="bomb">
+                <i class="fa fa-bomb"></i>
             </li>
-            <li class="card" type="cherry">
-                <i class="fa fa-cherry"></i>
+            <li class="card open show" type="bolt">
+                <i class="fa fa-bolt"></i>
             </li>
-            <li class="card match" type="grape">
-                <i class="fa fa-grape"></i>
+            <li class="card" type="bicycle">
+                <i class="fa fa-bicycle"></i>
             </li>
-            <li class="card" type="lemon">
-                <i class="fa fa-lemon"></i>
+            <li class="card" type="plane">
+                <i class="fa fa-paper-plane-o"></i>
             </li>
-            <li class="card" type="carrot">
-                <i class="fa fa-carrot"></i>
-            </li>            
+            <li class="card" type="cube">
+                <i class="fa fa-cube"></i>
+            </li>
         </ul>
 
-        <div id="popup" class="overlay">
+        <div id="popup1" class="overlay">
             <div class="popup">
-                <h2>Congratulations</h2>
+                <h2>Congratulations 🎉</h2>
                 <a class="close" href=# >×</a>
-                <div class="content1">
-                    Congratulations you're a winner
+                <div class="content-1">
+                    Congratulations you're a winner 🎉🎉
                 </div>
-                <div class="content2">
+                <div class="content-2">
                     <p>You made <span id=finalMove> </span> moves </p>
                     <p>in <span id=totalTime> </span> </p>
+                    <p>Rating:  <span id=starRating></span></p>
                 </div>
                 <button id="play-again"onclick="playAgain()">
-                    Play again</a>
+                    Play again 😄</a>
                 </button>
             </div>
         </div>
